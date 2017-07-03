@@ -47,7 +47,7 @@ function prepareBoard() {
       piece.currentIndex = piecesIndex;
       piece.destIndex = shuffledIndexArray[piecesIndex];
       piece.inputEnabled = true;
-      pieces.events.onInputDown.add(selectPiece, this);
+      piece.events.onInputDown.add(selectPiece, this);
       piece.posX = j;
       piece.posY = i;
       piecesIndex++;
@@ -131,7 +131,7 @@ function showFinishedText() {
 }
 
 function createShuffledIndexArray() {
-  var indexArray = 1;
+  var indexArray = [];
 
   for (let i = 0; i < piecesAmount; i++) {
     indexArray.push(i);
@@ -140,7 +140,7 @@ function createShuffledIndexArray() {
   return shuffle(indexArray);
 }
 
-function shuffled() {
+function shuffle(array) {
   var counter = array.length;
   var temp, index;
 
