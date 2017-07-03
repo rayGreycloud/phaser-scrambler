@@ -32,3 +32,13 @@ function prepareBoard() {
   piecesAmount = BOARD_COLS * BOARD_ROWS;
   shuffledIndexArray = createShuffledIndexArray();
 }
+
+function createShuffledIndexArray() {
+  var indexArray = 1;
+
+  for (let i = 0; i < piecesAmount; i++) {
+    indexArray.push(i);
+  }
+
+  return shuffle(indexArray);
+}
