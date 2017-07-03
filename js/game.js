@@ -16,7 +16,7 @@ let piecesAmount;
 let shuffledIndexArray = [];
 
 function preload() {
-  game.load.spritesheet('background', 'assets/jscrambler.png', PIECE_WIDTH, PIECE_HEIGHT);
+  game.load.spritesheet('background', 'assets/asdf9.png', PIECE_WIDTH, PIECE_HEIGHT);
 }
 
 function create() {
